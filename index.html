@@ -18,6 +18,41 @@
         font-style: italic;
         background-color: lightgray;
       }
+      blockquote {
+        margin: 0;
+      }
+      blockquote p {
+        padding: 15px;
+        background: #eee;
+        border-radius: 5px;
+      }
+      blockquote p::before {
+        content: '\201C';
+      }
+      blockquote p::after {
+        content: '\201D';
+      }
+      img.resize {
+        max-width:90%;
+        max-height:90%;
+      }
+      details {
+        border: 1px solid #aaa;
+        border-radius: 4px;
+        padding: .5em .5em 0;
+      }
+      summary {
+        font-weight: bold;
+        margin: -.5em -.5em 0;
+        padding: .5em;
+      }
+      details[open] {
+        padding: .5em;
+      }
+      details[open] summary {
+        border-bottom: 1px solid #aaa;
+        margin-bottom: .5em;
+      }
     </style>
   </head>
   <body>
@@ -28,10 +63,14 @@
     </nav>
     <section>
       <h1>Semantic Elements</h1>
+      <figure>
+        <blockquote cite="https://www.brainyquote.com/topics/semantics-quotes">
+          <p>All of our work, our whole life is a matter of semantics, because words are the tools with which we work, the material out of which laws are made, out of which the Constution was written. Everything depends on our understanding of them.</p>
+        </blockquote>
+        <figcaption><small>--Felix Frankfurter, <cite>Reply to counsel who said a challenge from the bench was “just a matter of semantics,” Reader’s Digest (June 1964)</cite></small></figcaption>
+      </figure>
+      <hr>
       <p>Semantic elements clearly define its content and are meaningful to both the browser and the developer. Semantic elements describe their meaning in a way that both a human and machine can understand. Semantic elements describe the purpose and the content accurately. When using HTML, semantic elements may be used to define the different parts of a web page.</p>
-      <aside>
-        <p>Semantic elements are something that I want to learn more about and hopefully master. I am grateful for this class.</p>
-      </aside>
       <p>Semantic tags are used to increase:</p>
       <ul>
         <li>accessibility</li>
@@ -39,6 +78,9 @@
         <li>internationalization</li>
         <li>interoperability</li>
       </ul>
+      <aside>
+        <p>Semantic elements are something that I want to learn more about and hopefully master. I am grateful for this class.</p>
+      </aside>
       <p>The main semantic tags for larger document outlines include:</p>
       <ul>
         <li>&lt;header&gt;</li>
@@ -50,7 +92,7 @@
       </ul>
       <p>Using semantic elements allows for data to be reused and shared across different applications, enterprises, and communities. Semantic elements are much easier to read and understand for programmers, search engines, and assistive technologies which in turn makes it a <b>better experience for users</b>. Semantic elements can also help develop a more consistent code which makes it easier for everyone to understand.</p>
       <figure>
-        <img src="semantic-elements.jpg" alt="Semantic Elements">
+        <img src="semantic-elements.jpg" alt="Semantic Elements" class="resize">
         <figcaption>Fig1. - Semantic Elements.</figcaption>
       </figure>
     </section>
@@ -62,8 +104,11 @@
         <li>To be able to support my family.</li>
         <li>To be able to learn more about coding.</li>
       </ol>
+      <details>
+        <summary>Details</summary>
+        I hope that I can learn everything I need to. This can help me provide a higher quality of life and a better future for my family.
+      </details>
     </section>
-    <hr>
     <footer>
       <p><small>Author: creinheim | <a href="mailto:creinheim@gmail.com">creinheim@gmail.com</a></small></p>
     </footer>
